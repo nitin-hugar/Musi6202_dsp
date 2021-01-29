@@ -1,5 +1,3 @@
-
-
 import numpy as np
 from scipy.io.wavfile import read
 import scipy.signal
@@ -17,8 +15,8 @@ def crossCorr(x,y):
 
 
 #function to find the height of the peaks
-def roundup(x):
-         return int(np.floor(x / 1e+11)) * 1e+11
+def roundup(z):
+         return int(np.floor(z / 1e+11)) * 1e+11
 
 #function to find the snare positions in the drum loop
 def findSnarePosition(snareFilename, drumloopFilename):
