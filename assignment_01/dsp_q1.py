@@ -57,6 +57,7 @@ def main():
     plt.xlabel('Sample number')
     plt.ylabel('Amplitude')
     
+    plt.subplots_adjust(hspace=2)
     plt.savefig('results/01-correlation.png') #exports the correlation graphs as a png file
 
 if __name__ == "__main__":
