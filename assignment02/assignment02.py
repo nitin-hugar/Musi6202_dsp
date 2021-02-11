@@ -1,18 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[21]:
-
-
 import numpy as np
 import scipy.signal
 import matplotlib.pyplot as plt
 import time
 import scipy.io.wavfile as wav
-
-
-# In[22]:
-
 
 #Plot x and h
 #Function to perform convolution of signals
@@ -36,15 +26,9 @@ def myTimeConv(x,h):
     return y
 
 
-# In[23]:
-
-
 #If the length of 'x' is 200 and the length of 'h' is 100, what is the length of 'y' ?
 
 # The Length of y will be 299 samples
-
-
-# In[24]:
 
 
 #Convolution using the built in scipy.signal.convolve function 
@@ -67,10 +51,6 @@ def CompareConv(x, h):
     stdev = np.std(diff)
     
     return m, mabs, stdev, np.array([elapsed_time_y1, elapsed_time_y2])
-
-
-# In[25]:
-
 
 
 def main():
@@ -121,35 +101,10 @@ def main():
     #Just first 2000 samples to compare time
     output = CompareConv(x_piano[:2000],x_impulse_response[:2000])
     
-    #np.savetxt('results/CompareConv.txt',output)
-
-    
-
-
-# In[26]:
-
+    np.savetxt("results/Convolve.txt", output, fmt="%s")
 
 
 if __name__ == "__main__":
     main()    
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
 
 
