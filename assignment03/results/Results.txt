@@ -1,0 +1,4 @@
+3.4) 4.0
+3.5) 2.0
+
+Q4 : When the square wave is windowed with the hanning window, the spectrum is cleaner with lesser spectral leakage. We can see sharp spectral lines. The rectangular window doesn’t condition the signal at all and is redundant. 
